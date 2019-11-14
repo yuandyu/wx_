@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<include src="/components/footer/footer"></include>
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <van-button type="primary" bindtap="primary">按钮</van-button>
+  <van-button color="#7232dd" >渐变色按钮</van-button>
+  {{currentDate}}
+  <van-row style="width: 100%;">
+    <van-col span="8">span: 8</van-col>
+    <van-col span="8">span: 8</van-col>
+    <van-col span="8">span: 8</van-col>
+  </van-row>
+
+  <van-popup show="{{ show }}" bind:close="onClose">
+    <van-datetime-picker
+      type="datetime"
+      value="{{ currentDate }}"
+      min-date="{{ minDate }}"
+      max-date="{{ maxDate }}"
+      bind:input="onInput"
+    />
+  </van-popup>
+  
+  <van-cell-group>
+  <van-field
+    value="{{ value }}"
+    placeholder="请输入用户名"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+</van-cell-group>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

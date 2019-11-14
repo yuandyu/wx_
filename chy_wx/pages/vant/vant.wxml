@@ -1,0 +1,5 @@
+<view>
+  <include src="/components/footer/footer"></include>
+  <van-picker columns="{{ columns }}" bind:change="onChange" />
+  <van-toast id="van-toast" />
+</view>
