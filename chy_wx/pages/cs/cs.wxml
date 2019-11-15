@@ -1,0 +1,41 @@
+<!--pages/cs/cs.wxml-->
+<view class="cs-top">
+  <van-row>
+    <van-col span="6" class="cs-top-left">
+      <text>潮州市</text> 
+      <van-icon name="arrow-down" />
+    </van-col>
+    <van-col span="6" offset="12" class="cs-top-right">共2个站点</van-col>
+  </van-row>
+</view>
+<view style="height: 30pt;"> </view>
+<view class="cs-nav" wx:for="{{5}}" wx:key="{{index}}">
+  <view class="cs-nav-box">
+    <view>
+      <image src="https://img.yzcdn.cn/vant/cat.jpeg" class="cs-nav-image"></image>
+    </view>
+    <view class="cs-nav-right">
+      <view class="top">
+        <view class="left">练盟会展篮球馆</view>
+        <view class="right"><image src="/image/1.png" class="cs-nav-icon"></image>51m</view>
+      </view>
+      <view class="address">琶洲东路2—8号广东省广州市海珠区</view>
+      <view class="time">营业时间：10:00-23:00</view>
+    </view>
+  </view>
+  <view class="cs-nav-bottom">
+    <view class="nav">
+    <view class="right">
+      <image src="/image/2.png" class="cs-nav-icon"></image>
+      <text>正常营业</text>
+     </view>
+    </view>
+    <view class="nav">
+      <view class="right">
+        <image src="/image/3.png" class="cs-nav-icon"></image>
+        <text>1小时内免费</text>
+      </view> 
+    </view>
+  </view>
+</view>
+<include src="/components/common/common"></include>

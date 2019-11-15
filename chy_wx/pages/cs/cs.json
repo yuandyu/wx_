@@ -1,0 +1,12 @@
+{
+  "navigationBarBackgroundColor": "#466df0",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "站点列表",
+  "backgroundColor": "#f0f2f5",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "van-row": "vant-weapp/row/index",
+    "van-col": "vant-weapp/col/index",
+    "van-icon": "vant-weapp/icon/index"
+  }
+}

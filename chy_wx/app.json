@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/vant/vant"
+    "pages/vant/vant",
+    "pages/cs/cs"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -14,6 +15,7 @@
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "van-tabbar": "vant-weapp/tabbar/index",
-    "van-tabbar-item": "vant-weapp/tabbar-item/index"
+    "van-tabbar-item": "vant-weapp/tabbar-item/index",
+    "van-toast": "vant-weapp/toast/index"
   }
 }

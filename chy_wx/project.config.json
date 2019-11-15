@@ -75,6 +75,12 @@
 					"pathName": "pages/index/index",
 					"query": "id=5",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cs/cs",
+					"pathName": "pages/cs/cs",
+					"scene": null
 				}
 			]
 		}

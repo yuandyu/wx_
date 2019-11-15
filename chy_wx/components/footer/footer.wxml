@@ -1,4 +1,4 @@
-<view bindtap="switchTab">测试{{active}}</view>
+<view style="height: 50px; width: 100%;"> </view>
 <van-tabbar active="{{ active }}" bind:change="switchTab">
   <van-tabbar-item wx:for="{{list}}" wx:key="index" icon="{{item.iconPath}}">{{item.text}}</van-tabbar-item>
 </van-tabbar>

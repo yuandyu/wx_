@@ -1,12 +1,14 @@
 //app.js
 const request = require('./utils/request.js');
 const api = require('./utils/api.js');
-const page = require('./utils/page.js');
-import Toast from 'vant-weapp/toast/toast';
+const page = require('./utils/page.js'), $toast = require('./utils/toast.js');
+
+
 App({
   request,
   api,
   page,
+  $toast,
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []

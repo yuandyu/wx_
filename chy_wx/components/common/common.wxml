@@ -1,0 +1,2 @@
+<include src="/components/footer/footer"></include>
+<include src="/components/toast/toast"></include>

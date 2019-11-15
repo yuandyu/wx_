@@ -18,9 +18,9 @@ Page({
     show: false
   },
   primary: function(){
-      this.setData({
-        show: true
-      })
+    this.setData({
+      show: true
+    })
     wx.navigateTo({
       url: '../vant/vant'
     })
@@ -40,8 +40,13 @@ Page({
       currentDate: event.detail
     });
   },
-  onLoad: function (t) {
-    app.page.onLoad(this, t);
+  onLoad: function (options) {
+    app.page.onLoad(this, options);
+    console.log(app.$toast)
+    app.$toast.loading({
+      mask: true,
+      message: '加载中...'
+    });;
     app.request({
       url: app.api.Violation.GetCarTypeList,
       method: 'GET',
