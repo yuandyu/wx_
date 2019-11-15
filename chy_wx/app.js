@@ -1,8 +1,5 @@
 //app.js
-const request = require('./utils/request.js');
-const api = require('./utils/api.js');
-const page = require('./utils/page.js'), $toast = require('./utils/toast.js');
-
+const request = require('./utils/request.js'),api = require('./utils/api.js'), page = require('./utils/page.js'), $toast = require('./utils/toast.js');
 
 App({
   request,

@@ -1,4 +1,5 @@
-let router = [{
+// 页面路由
+var router = [{
   iconPath: "home-o",
   text: "组件",
   detail: 0,
