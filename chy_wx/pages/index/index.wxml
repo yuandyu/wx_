@@ -7,8 +7,10 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <van-button type="primary" bindtap="primary">按钮</van-button>
-  <van-button color="#7232dd" >渐变色按钮</van-button>
+
+  <van-button type="primary">按钮</van-button>
+  <van-button color="#7232dd">渐变色按钮</van-button>
+  
   <van-row style="width: 100%;">
     <van-col span="8">span: 8</van-col>
     <van-col span="8">span: 8</van-col>
@@ -16,25 +18,7 @@
   </van-row>
 
   <van-popup show="{{ show }}" bind:close="onClose">
-    <van-datetime-picker
-      type="datetime"
-      value="{{currentDate }}"
-      min-date="{{ minDate }}"
-      max-date="{{ maxDate }}"
-      bind:input="onInput"
-    />
+    <van-datetime-picker type="datetime" value="{{currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:input="onInput" />
   </van-popup>
-  
-  <van-cell-group>
-  <van-field
-    value="{{ value }}"
-    placeholder="请输入用户名"
-    border="{{ false }}"
-    bind:change="onChange"
-  />
-</van-cell-group>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
 </view>
 <include src="/components/common/common"></include>

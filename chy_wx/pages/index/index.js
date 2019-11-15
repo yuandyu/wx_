@@ -40,6 +40,9 @@ Page({
       currentDate: event.detail
     });
   },
+  onShow: function (){
+    app.page.onLoad(this);
+  },
   onLoad: function (options) {
     app.page.onLoad(this, options);
     console.log(app.$toast)

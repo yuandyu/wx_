@@ -5,7 +5,14 @@ module.exports = {
   currentPageOptions: {}, // 当前页面参数
   list: router,
   onLoad: function (t, e){
-    this.currentPage = t, this.currentPageOptions = e;
+    this.currentPageOptions = e;
+    this.activeTab(t);
+  },
+  onShow(e){
+    this.activeTab(t);
+  },
+  activeTab: function (t){
+    this.currentPage = t;
     this.currentPage.setData({
       list: this.list
     })
@@ -17,9 +24,6 @@ module.exports = {
         });
       }
     }
-  },
-  onShow(){
-    
   },
   switchTab: function (event){
     let list = this.currentPage.data.list;
