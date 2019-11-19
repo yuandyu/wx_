@@ -1,0 +1,19 @@
+{
+  "tabBar": {
+    "custom": true,
+    "color": "#0099ff",
+    "selectedColor": "#0099ff",
+    "backgroundColor": "#0099ff",
+    "list": [
+      {
+        "pagePath": "page/component/index",
+        "text": "组件"
+      },
+      {
+        "pagePath": "page/API/index",
+        "text": "接口"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

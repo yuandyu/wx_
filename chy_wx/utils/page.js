@@ -34,11 +34,45 @@ module.exports = {
           active: event.detail
         });
         wx.navigateTo({
-          url: '/' + list[i].url
+          url: '/' + list[i].url,
+          success: function(){
+            wx.showTabBar({
+              animation: false
+            })
+          }
         });
       } else{
         list[i].active = false;
       }
     }
+  },
+  getLocation: function(){
+    let _this = this;
+    wx.getSetting({
+      success(res) {
+        console.log(res, 'getSetting')
+        wx.authorize({
+          scope: 'scope.record',
+          success() {
+            // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
+            wx.startRecord()
+          }
+        })
+      }
+    })
+    wx.login({
+      success(res) {
+        wx.getLocation({
+          withCredentials: true,
+          success: data => {
+            _this.currentPage.setData({
+              getLocation: data
+            })
+            // console.log(data, '地理位置')
+          }
+        })
+      }
+    })
+    
   }
 }

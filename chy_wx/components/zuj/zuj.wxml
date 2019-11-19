@@ -1,0 +1,3 @@
+<!--components/zuj/zuj.wxml-->
+<text>{{myProperty}}</text>
+<view>{{sum}}</view>

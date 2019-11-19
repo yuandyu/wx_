@@ -8,6 +8,9 @@ App({
   $toast,
   onLaunch: function () {
     // 展示本地存储能力
+    wx.showTabBar({
+      animation: false
+    })
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)

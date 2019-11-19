@@ -6,6 +6,7 @@
     "van-field": "vant-weapp/field",
     "van-row": "vant-weapp/row",
     "van-col": "vant-weapp/col/index",
-    "van-popup": "vant-weapp/popup/index"
+    "van-popup": "vant-weapp/popup/index",
+    "zuj": "/components/zuj/zuj"
   }
 }

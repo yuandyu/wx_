@@ -15,7 +15,8 @@ Page({
     maxDate: new Date(2019, 10, 1).getTime(),
     currentDate: new Date().getTime(),
     value: '',
-    show: false
+    show: false,
+    myProperty: '小型汽车'
   },
   primary: function(){
     this.setData({
@@ -31,6 +32,12 @@ Page({
       url: '../logs/logs'
     })
   },
+  onGetCode: function(data){
+    console.log(data, 'data')
+    this.setData({
+      myProperty: data.detail
+    })
+  },
   onChange(event) {
     // event.detail 为当前输入的值
     console.log(event.detail);
@@ -42,10 +49,26 @@ Page({
   },
   onShow: function (){
     app.page.onLoad(this);
+    console.log(this.data.getLocation, 'getLocation')
+  },
+  getPhoneNumber: function(e){
+    // app.page.getLocation();
+    console.log(e)
+    console.log(e.detail.errMsg)
+    console.log(e.detail.iv)
+    console.log(e.detail.encryptedData)
   },
   onLoad: function (options) {
     app.page.onLoad(this, options);
-    console.log(app.$toast)
+    this.getPhoneNumber()
+    // wx.getLocation();
+    // app.page.getLocation();
+    console.log(wx.getUserInfo(), 'getUserInfo')
+    wx.getUserInfo({
+      success: data => {
+        console.log(data, 'getUserInfo')
+      }
+    })
     app.$toast.loading({
       mask: true,
       message: '加载中...'

@@ -9,8 +9,9 @@
   </view>
 
   <van-button type="primary">按钮</van-button>
-  <van-button color="#7232dd">渐变色按钮</van-button>
-  
+  <van-button color=" #7232dd">{{myProperty}}</van-button>
+  <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">666666</button>
+  <zuj myProperty="{{myProperty}}" bind:myevent="onGetCode"></zuj>
   <van-row style="width: 100%;">
     <van-col span="8">span: 8</van-col>
     <van-col span="8">span: 8</van-col>
